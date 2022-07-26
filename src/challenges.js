@@ -34,11 +34,12 @@ function concatName(string4) {
   // return lastFirst;
 }
 console.log(concatName(['Gustavo', 'Ferreira', 'Andrade', 'Rossin']));
-// Desafio 5
-function footballPoints() {
-  // seu código
-}
 
+// Desafio 5
+function footballPoints(wins, ties) {
+  return wins * 3 + ties;
+}
+console.log(footballPoints(14,8))
 // Desafio 6
 function highestCount() {
   // seu código
