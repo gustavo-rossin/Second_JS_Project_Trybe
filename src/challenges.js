@@ -1,3 +1,4 @@
+/* eslint-disable guard-for-in */
 // Desafio 1
 
 function compareTrue(parametro1, parametro2) {
@@ -26,7 +27,7 @@ console.log(splitSentence('go Trybe'));
 function concatName(string4) {
   let lastFirst;
   for (let index = 0; index < string4.length; index += 1) {
-    lastFirst = string4[index] + ', ' + string4[0];
+    lastFirst = `${string4[index]}, ${string4[0]}`;
     // lastFirst = console.log("'" + string4[index] + ', ' + string4[0] + "'");
   }
   return lastFirst;
@@ -73,7 +74,7 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
-// eslint-disable-next-line complexity
+// eslint-disable-next-line complexity, sonarjs/cognitive-complexity
 function fizzBuzz(codigo) {
   for (let index = 0; index < codigo.length; index += 1) {
     if (codigo[index] % 3 === 0 && codigo[index] % 5 === 0) {
@@ -101,9 +102,23 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código
+function techList(techs, names) {
+  techs.sort();
+  let objects = [];
+  if (techs.length === 0) {
+    return 'Vazio!';
+  }
+  for (let index in techs) {
+    objects.push({
+      tech: techs[index],
+      name: names,
+    });
+  }
+  return objects;
 }
+
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
+console.log(techList([], 'Lucas'));
 
 module.exports = {
   calcArea,
