@@ -1,3 +1,4 @@
+/* eslint-disable complexity */
 /* eslint-disable guard-for-in */
 // Desafio 1
 
@@ -94,12 +95,50 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código
+function encode(frase1) {
+  let splitted;
+  let vogaisPorNumeros = [];
+  splitted = frase1.split('');
+  for (let keys in splitted) {
+    if (splitted[keys] === 'a') {
+      vogaisPorNumeros[keys] = 1;
+    } else if (splitted[keys] === 'e') {
+      vogaisPorNumeros[keys] = 2;
+    } else if (splitted[keys] === 'i') {
+      vogaisPorNumeros[keys] = 3;
+    } else if (splitted[keys] === 'o') {
+      vogaisPorNumeros[keys] = 4;
+    } else if (splitted[keys] === 'u') {
+      vogaisPorNumeros[keys] = 5;
+    } else {vogaisPorNumeros[keys] = splitted[keys];
+    }
+  }
+  return vogaisPorNumeros.join('');
 }
-function decode() {
-  // seu código
+console.log(encode('hi there!'));
+
+function decode(frase2) {
+  let wordMaiuscula;
+  let numParaVogais = [];
+  wordMaiuscula = frase2.split('');
+  for (let k in wordMaiuscula) {
+    if ( wordMaiuscula[k] == 1) {
+      numParaVogais[k] = 'a';
+    } else if ( wordMaiuscula[k] == 2) {
+      numParaVogais[k] = 'e';
+    } else if ( wordMaiuscula[k] == 3) {
+      numParaVogais[k] = 'i';
+    } else if ( wordMaiuscula[k] == 4) {
+      numParaVogais[k] = 'o';
+    } else if ( wordMaiuscula[k] == 5) {
+      numParaVogais[k] = 'u';
+    } else { numParaVogais[k] = wordMaiuscula[k];
+    }
+  }
+  return numParaVogais.join('');
 }
+console.log(decode('42 1M2g14!'));
+
 
 // Desafio 10
 function techList(techs, names) {
