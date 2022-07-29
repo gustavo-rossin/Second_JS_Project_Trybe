@@ -34,11 +34,20 @@ function triangleCheck(lineA, lineB, lineC) {
   } return false;
 } 
 console.log(triangleCheck(10, 1, 8));
-// Desafio 13
-function hydrate() {
-  // seu código aqui
-}
 
+// Desafio 13
+function hydrate(agua) {
+let switches = /\d+/g;
+let result = agua.match(switches);
+let soma = 0;
+for (let i in result) {
+let transform = parseInt(result[i]);
+  soma += transform;  
+} if (soma === 1) {
+  return soma + ' copo de água';
+} return soma + ' copos de água';
+}
+console.log(hydrate('1 cerveja'));
 module.exports = {
   generatePhoneNumber,
   hydrate,
