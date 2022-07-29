@@ -45,18 +45,17 @@ console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount(array) {
-  
   let maiorNumero = Math.max(...array);
   let contagemHighest = 0;
-  
+
   for (let index in array) {
-    if( array[index] === maiorNumero) {
+    if (array[index] === maiorNumero) {
       contagemHighest += 1;
     }
   }
   return contagemHighest;
 }
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1, 9, 9, 9]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1, 9, 9, 9, 10]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -120,23 +119,22 @@ function decode(frase2) {
   let numParaVogais = [];
   wordMaiuscula = frase2.split('');
   for (let k in wordMaiuscula) {
-    if ( wordMaiuscula[k] == 1) {
+    if (wordMaiuscula[k] === 1) {
       numParaVogais[k] = 'a';
-    } else if ( wordMaiuscula[k] == 2) {
+    } else if (wordMaiuscula[k] === 2) {
       numParaVogais[k] = 'e';
-    } else if ( wordMaiuscula[k] == 3) {
+    } else if (wordMaiuscula[k] === 3) {
       numParaVogais[k] = 'i';
-    } else if ( wordMaiuscula[k] == 4) {
+    } else if (wordMaiuscula[k] === 4) {
       numParaVogais[k] = 'o';
-    } else if ( wordMaiuscula[k] == 5) {
+    } else if (wordMaiuscula[k] === 5) {
       numParaVogais[k] = 'u';
-    } else { numParaVogais[k] = wordMaiuscula[k];
+    } else {numParaVogais[k] = wordMaiuscula[k];
     }
   }
   return numParaVogais.join('');
 }
 console.log(decode('42 1M2g14!'));
-
 
 // Desafio 10
 function techList(techs, names) {
