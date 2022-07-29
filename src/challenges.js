@@ -119,17 +119,17 @@ function decode(frase2) {
   let numParaVogais = [];
   wordMaiuscula = frase2.split('');
   for (let k in wordMaiuscula) {
-    if (wordMaiuscula[k] === 1) {
+    if (wordMaiuscula[k] == 1) {
       numParaVogais[k] = 'a';
-    } else if (wordMaiuscula[k] === 2) {
+    } else if (wordMaiuscula[k] == 2) {
       numParaVogais[k] = 'e';
-    } else if (wordMaiuscula[k] === 3) {
+    } else if (wordMaiuscula[k] == 3) {
       numParaVogais[k] = 'i';
-    } else if (wordMaiuscula[k] === 4) {
+    } else if (wordMaiuscula[k] == 4) {
       numParaVogais[k] = 'o';
-    } else if (wordMaiuscula[k] === 5) {
+    } else if (wordMaiuscula[k] == 5) {
       numParaVogais[k] = 'u';
-    } else {numParaVogais[k] = wordMaiuscula[k];
+    } else { numParaVogais[k] = wordMaiuscula[k];
     }
   }
   return numParaVogais.join('');
